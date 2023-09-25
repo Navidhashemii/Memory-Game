@@ -76,7 +76,7 @@ function App() {
   
   return (
     <div className="App">
-      <h1>Animal Memory Game</h1>
+      <h1 className='title'>Animal Memory Game</h1>
       <button onClick={shuffleCards}>New Game</button>
 
       <div className='card-grid'>
@@ -92,7 +92,7 @@ function App() {
 
       </div>
     
-       {showTurns ? <p>Turns: {turns}</p> : "" }
+       {showTurns ? <p className='turns'>Turns: {turns}</p> : "" }
 
     </div>
   );

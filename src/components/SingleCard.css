@@ -5,8 +5,9 @@
 .card img {
     width: 100%;
     display: block;
-    border: 2px solid #fff;
-    border-radius: 6px;
+    border-radius: 12px;
+    background-color: rgb(1, 40, 16);
+    
 }
 
 .card .front {
@@ -23,6 +24,7 @@
 .card .cover {
     transition: all ease-in 0.3s;
     transition-delay: 0.2s;
+    cursor: pointer;
 }
 
 .flipped .cover {

@@ -3,16 +3,14 @@ import './App.css';
 import SingleCard from './components/SingleCard';
 
 const cardImages = [
-  {"src" : "/images/bear.png", matched: false},
-  {"src" : "/images/dog.png", matched: false},
-  {"src" : "/images/eagle.png", matched: false},
-  {"src" : "/images/elephant.png", matched: false},
-  {"src" : "/images/horse.png", matched: false},
-  {"src" : "/images/lion.png", matched: false},
-  {"src" : "/images/pig.png", matched: false},
-  {"src" : "/images/rabbit.png", matched: false},
-  {"src" : "/images/Tiger.png", matched: false},
-  {"src" : "/images/zebra.png", matched: false}
+  {"src" : "/images/big-chicken.png", matched: false},
+  {"src" : "/images/cake.png", matched: false},
+  {"src" : "/images/chicken.png", matched: false},
+  {"src" : "/images/eggplant.png", matched: false},
+  {"src" : "/images/fries.png", matched: false},
+  {"src" : "/images/hamburger.png", matched: false},
+  {"src" : "/images/meat.png", matched: false},
+  {"src" : "/images/soup.png", matched: false}
 ]
 
 function App() {

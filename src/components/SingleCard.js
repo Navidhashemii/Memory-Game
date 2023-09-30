@@ -2,6 +2,8 @@ import './SingleCard.css'
 
 function SingleCard({card, handleChoice, flipped, disabled}) {
 
+  
+
   const handleClick = () => {
     if(!disabled){
         handleChoice(card)
@@ -16,7 +18,7 @@ function SingleCard({card, handleChoice, flipped, disabled}) {
             <img
                 onClick={handleClick} 
                 className='cover' 
-                src='/images/cover.jpg' 
+                src='/images/cover.png' 
                 alt='card cover' 
             />
         </div>

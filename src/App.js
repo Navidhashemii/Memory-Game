@@ -1,4 +1,5 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useState, useRef} from 'react'
+import autoAnimate from '@formkit/auto-animate'
 import './App.css';
 import SingleCard from './components/SingleCard';
 
@@ -21,9 +22,14 @@ function App() {
   const [choice2, setChoice2] = useState(null)
   const [disabled, setDisabled] = useState(false)
   const [showTurns, setShowTurns] = useState(false)
+  const [start, setStart] = useState(true)
+
+  const parent = useRef(null);
+
+    useEffect(() => {
+      parent.current && autoAnimate(parent.current, {duration: 500});
+    }, [parent]);
   
-
-
 
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
@@ -35,6 +41,7 @@ function App() {
       setChoice2(null)
       setTurns(0)
       setShowTurns(true)
+      setStart(false)
   }
 
   const handleChoice = (card) => {
@@ -74,10 +81,11 @@ function App() {
   
   return (
     <div className="App">
-      <h1 className='title'>Animal Memory Game</h1>
-      <button onClick={shuffleCards}>New Game</button>
+      <h1 className='title'>Memory Game</h1>
+      {start ? <button onClick={shuffleCards}>Start</button> : <button onClick={shuffleCards}>New Game</button>}
+      
 
-      <div className='card-grid'>
+      <div ref={parent} className='card-grid'>
         {cards.map(card => (
         <SingleCard
           key={card.id}
